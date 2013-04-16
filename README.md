@@ -4,17 +4,21 @@ student grade calculator
 
 Usage
 =====
-ktuHesapla = ktunot.KtuNot("gradesFile.txt", yourGrade)
-ktuHesapla.hesapla()
+    ktuHesapla = ktunot.KtuNot("gradesFile.txt", yourGrade)
+    ktuHesapla.hesapla()
 
-z value = ktuHesapla.zNotuDeger
-t value = ktuHesapla.tNotuDeger
-average value = ktuHesapla.ortalamaDeger
-all grade numbers = len(ktuHesapla.notlar)
-standard deviation = ktuHesapla.sSapmaDeger
+**z value** = ktuHesapla.zNotuDeger
 
-grades = ktuHesapla.notlar[indexNumber]
+**t value** = ktuHesapla.tNotuDeger
+
+**average value** = ktuHesapla.ortalamaDeger
+
+**all grade numbers** = len(ktuHesapla.notlar)
+
+**standard deviation**= ktuHesapla.sSapmaDeger
+
+**grades** = ktuHesapla.notlar[indexNumber]
 
 Run
 ===
-python main.py
+    python main.py
