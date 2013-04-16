@@ -20,6 +20,7 @@ Usage
 **grades** = ktuHesapla.notlar[indexNumber]
 
 If you want to visualization:
+
     ktuHesapla.gorsel("Lesson's Name")
 
 Run
