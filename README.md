@@ -1,6 +1,6 @@
 ktunot
 ======
-student grade calculator
+Student grade calculator
 
 Usage
 =====
@@ -18,6 +18,9 @@ Usage
 **standard deviation**= ktuHesapla.sSapmaDeger
 
 **grades** = ktuHesapla.notlar[indexNumber]
+
+If you want to visualization:
+    ktuHesapla.gorsel("Lesson's Name")
 
 Run
 ===
