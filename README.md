@@ -7,17 +7,29 @@ Usage
     ktuHesapla = ktunot.KtuNot("gradesFile.txt", yourGrade)
     ktuHesapla.hesapla()
 
-**z value** = ktuHesapla.zNotuDeger
+**z value**
 
-**t value** = ktuHesapla.tNotuDeger
+    ktuHesapla.zNotuDeger
 
-**average value** = ktuHesapla.ortalamaDeger
+**t value**
 
-**all grade numbers** = len(ktuHesapla.notlar)
+    ktuHesapla.tNotuDeger
 
-**standard deviation**= ktuHesapla.sSapmaDeger
+**average value**
 
-**grades** = ktuHesapla.notlar[indexNumber]
+    ktuHesapla.ortalamaDeger
+
+**all grade numbers**
+
+    len(ktuHesapla.notlar)
+
+**standard deviation**
+
+    ktuHesapla.sSapmaDeger
+
+**grades**
+
+    ktuHesapla.notlar[indexNumber]
 
 If you want to visualization:
 
