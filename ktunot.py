@@ -1,27 +1,32 @@
 class KtuNot():
-    def __init__(self, dosya):
+    def __init__(self, dosya, kullaniciNot):
         self.dosya = dosya
+        self.kullaniciNot = kullaniciNot
         self.notlar = []
         self.notlarToplam = 0
         self.standartToplam = 0
 
     def hesapla(self):
-        pass
+        self.dosyaAc()
+        self.ortalama()
+        self.sSapma()
+        self.zNotu()
+        self.tNotu()
 
     def sSapma(self):
         import math
         for notx in self.notlar:
-            self.standartToplam = float(self.standartToplam + (float(notx)-self.ortalama())**2)
-        return math.sqrt(float(self.standartToplam / len(self.notlar) - 1 ))
+            self.standartToplam = float(self.standartToplam + (float(notx)-self.ortalama()) ** 2)
+        self.sSapmaDeger = math.sqrt(float(self.standartToplam / len(self.notlar) - 1 ))
 
     def tNotu(self):
-        pass
+        self.tNotuDeger = float(10*self.zNotu() + 50)
 
     def zNotu(self):
-        pass
+        self.zNotuDeger = float((float(self.kullaniciNot) - self.ortalama()) / self.sSapma())
 
     def ortalama(self):
-        return float(self.notlarToplam/len(self.notlar))
+        self.ortalamaDeger = float(self.notlarToplam / len(self.notlar))
 
     def dosyaAc(self):
         with open(self.dosya,"r") as dosya:
