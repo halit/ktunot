@@ -16,17 +16,17 @@ class KtuNot():
     def sSapma(self):
         import math
         for notx in self.notlar:
-            self.standartToplam = float(self.standartToplam + (float(notx)-self.ortalama()) ** 2)
-        self.sSapmaDeger = math.sqrt(float(self.standartToplam / len(self.notlar) - 1 ))
+            self.standartToplam = float(self.standartToplam + (float(notx) - self.ortalamaDeger) ** 2)
+        self.sSapmaDeger = math.sqrt(self.standartToplam / (len(self.notlar) - 1))
 
     def tNotu(self):
-        self.tNotuDeger = float(10*self.zNotu() + 50)
+        self.tNotuDeger = float(10 * self.zNotuDeger + 50)
 
     def zNotu(self):
-        self.zNotuDeger = float((float(self.kullaniciNot) - self.ortalama()) / self.sSapma())
+        self.zNotuDeger = float((float(self.kullaniciNot) - self.ortalamaDeger) / self.sSapmaDeger)
 
     def ortalama(self):
-        self.ortalamaDeger = float(self.notlarToplam / len(self.notlar))
+        self.ortalamaDeger = float(float(self.notlarToplam) / len(self.notlar))
 
     def dosyaAc(self):
         with open(self.dosya,"r") as dosya:
