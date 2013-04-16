@@ -38,3 +38,20 @@ class KtuNot():
     def temizlik(self, metin):
         metin = str(metin).replace("\n","").replace("\t","").replace(" ","")
         return metin
+
+    def gorsel(self, dersAdi):
+        from pylab import *
+        from Tkinter import *
+        import matplotlib.pyplot as plt
+        import collections
+
+        subreddits = collections.Counter(self.notlar)
+        sdata = subreddits.items()
+        sdata = sorted(sdata, key=lambda x: x[1], reverse=True)
+        plt.figure(1)
+        plt.subplot(211)
+        plt.title(str(dersAdi))
+        xlabel("Notlar")
+        ylabel("Kisi Sayisi")
+        plt.bar(map(lambda x:float(x[0]),sdata),map(lambda x:float(x[1]),sdata),alpha=5)
+        grid(True)
