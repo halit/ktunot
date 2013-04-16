@@ -1,10 +1,10 @@
 import ktunot
 
-ktuNotHesapla = ktunot.KtuNot("notlar.txt", 60)
-ktuNotHesapla.hesapla()
+ktuHesapla = ktunot.KtuNot("notlar.txt", 30)
+ktuHesapla.hesapla()
 
-print "z notu " + str(ktuNotHesapla.zNotuDeger)
-print "t notu " + str(ktuNotHesapla.tNotuDeger)
-print "ortalama " + str(ktuNotHesapla.ortalamaDeger)
-print "toplam not " + str(ktuNotHesapla.notlarToplam)
-print "standart sapma" + str(ktuNotHesapla.sSapmaDeger)
+print "z notu " + str(ktuHesapla.zNotuDeger)
+print "t notu " + str(ktuHesapla.tNotuDeger)
+print "ortalama " + str(ktuHesapla.ortalamaDeger)
+print "toplam not " + str(len(ktuHesapla.notlar))
+print "standart sapma " + str(ktuHesapla.sSapmaDeger)
